@@ -1,0 +1,17 @@
+services:
+  control-vehiculos:
+    build: .
+    container_name: control-vehiculos
+    ports:
+      - "8080:8080"
+    environment:
+      VEHICULOS_DB_PATH: /data/vehiculos.db
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-cambiar-me}
+      TZ: ${TZ:-UTC}
+    volumes:
+      - vehiculos_data:/data
+      - vehiculos_backups:/app/backups
+    restart: unless-stopped
+volumes:
+  vehiculos_backups:
+  vehiculos_data:

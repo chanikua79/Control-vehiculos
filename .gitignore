@@ -1,0 +1,25 @@
+# Java / Maven
+*.class
+target/
+*.jar
+
+# Bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Backups y archivos temporales
+*.bak*
+*.backup*
+backups/
+backup_mvp/
+error-arranque.txt
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
